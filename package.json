@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mui/joy": "^5.0.0-beta.5",
     "react-datepicker": "^4.16.0"
   }
 }

@@ -1,0 +1,20 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"  # Mapowanie portu React
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"  # Mapowanie portu Django
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
